@@ -1,0 +1,10 @@
+I2C_LCD1602.LcdInit(63)
+I2C_LCD1602.BacklightOff()
+basic.pause(2000)
+I2C_LCD1602.BacklightOn()
+I2C_LCD1602.ShowString("quadstore DHT11", 0, 0)
+basic.forever(function () {
+    I2C_LCD1602.ShowString("T:", 0, 0)
+    I2C_LCD1602.ShowString("H:", 8, 0)
+    I2C_LCD1602.ShowNumber(10, 0, 0)
+})
